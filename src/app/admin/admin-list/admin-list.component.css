@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+.card {
+  padding: 15px;
+  margin-bottom: 6px;
+}
+
+.hed {
+  margin-right: 5px;
+}

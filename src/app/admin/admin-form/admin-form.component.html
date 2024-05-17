@@ -1,0 +1,138 @@
+<div class="container mt-5">
+  <h2>Forma za Dodavanje apartmana u ponudi</h2>
+  <p>Popuniti polja kako bi dodali jos jednu smjestajnu jedinicu</p>
+  <form [formGroup]="apartmanForm" (submit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nazivApartmana" class="form-label">Naziv Apartmana</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nazivApartmana"
+        placeholder="Preporuka: Dajte sva razlicita imena Apartmanima"
+        formControlName="naziv"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('naziv')?.invalid &&
+          apartmanForm.get('naziv')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Naziv Apartmana
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="tipApartmana" class="form-label">Tip Apartmana</label>
+      <input
+        type="text"
+        class="form-control"
+        id="tipApartmana"
+        placeholder="Preporuka: Studio / Stan"
+        formControlName="tip"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('tip')?.invalid && apartmanForm.get('tip')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Tip Apartmana
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="maxBrojOsoba" class="form-label">Maksimalni Broj Osoba</label>
+      <input
+        type="number"
+        class="form-control"
+        id="maxBrojOsoba"
+        placeholder="Preporuka: Maksimalni broj osoba koji moze da boravi u apartmanu"
+        formControlName="max"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('max')?.invalid && apartmanForm.get('max')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Maksimalni broj Osoba
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="spratApartmana" class="form-label"
+        >Sprat na Kojem se Apartman Nalazi</label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="spratApartmana"
+        placeholder="Preporuka: Na kojem spratu se nalazi smjestajna jedinca"
+        formControlName="sprat"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('sprat')?.invalid &&
+          apartmanForm.get('sprat')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete SpratApartmana
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="cijenaApartmana" class="form-label">Cijena Apartmana</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cijenaApartmana"
+        placeholder="Preporuka: Cijena po danu za Apartman"
+        formControlName="cijena"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('cijena')?.invalid &&
+          apartmanForm.get('cijena')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Cijeanu Apartmana
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="img" class="form-label">Url Slike</label>
+      <input
+        type="text"
+        class="form-control"
+        id="img"
+        placeholder="Preporuka: Cijena po danu za Apartman"
+        formControlName="img_url"
+      />
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('img_url')?.invalid &&
+          apartmanForm.get('img_url')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Url Slike Apartmana
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="opisApartmana" class="form-label">Opis Apartmana</label>
+      <textarea
+        class="form-control"
+        id="opisApartmana"
+        rows="4"
+        formControlName="opis"
+      ></textarea>
+      <div
+        class="form-text text-danger fw-bold"
+        *ngIf="
+          apartmanForm.get('opis')?.invalid && apartmanForm.get('opis')?.touched
+        "
+      >
+        Unos nije Validan! Molimo Vas da unesete Opis Apartmana
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj Apartman</button>
+  </form>
+</div>

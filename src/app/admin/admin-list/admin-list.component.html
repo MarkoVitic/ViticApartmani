@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <div class="grid container">
+    <div>
+      <h2>Lista Apartman koja se nalaze u ponudi za izdavanje</h2>
+    </div>
+    <div>
+      <button (click)="logOut()" class="btn btn-warning hed">Odjavi se</button>
+      <button class="btn btn-primary" [routerLink]="['/form']">
+        Dodaj novi apartman u ponudi
+      </button>
+    </div>
+    <div *ngFor="let apartman of apartmani">
+      <mat-card class="example-card card">
+        <img
+          mat-card-image
+          src="assets/images/Slike aparmana pojedinacno/APARTMAN 1/{{
+            apartman.img_url
+          }}.jpg"
+          alt="Home of house"
+        />
+        <mat-card-content>
+          <div>
+            <mat-card-subtitle>Naziv Apartmana:</mat-card-subtitle>
+            <mat-card-title> {{ apartman.naziv }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>Sprat Apartmana:</mat-card-subtitle>
+            <mat-card-title> {{ apartman.sprat }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>Tip Apartmana:</mat-card-subtitle>
+            <mat-card-title> {{ apartman.tip }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>Maksimalni broj osoba:</mat-card-subtitle>
+            <mat-card-title> {{ apartman.max }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>OpisApartmana:</mat-card-subtitle>
+            <mat-card-title> {{ apartman.opis }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>Cijena Apartmana po Nocenju:</mat-card-subtitle>
+            <mat-card-title>
+              {{ apartman.cijena | currency : "EUR" }}</mat-card-title
+            >
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            (click)="editApartman(apartman.key!)"
+            class="btn btn-info"
+            mat-button
+          >
+            Izmijeni
+          </button>
+          <button
+            (click)="removeApartman(apartman.key!)"
+            class="btn btn-danger"
+            mat-button
+          >
+            Izbrisi
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

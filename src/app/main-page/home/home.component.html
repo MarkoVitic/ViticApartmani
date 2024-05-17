@@ -1,0 +1,353 @@
+<!-- <mat-grid-list cols="2" rowHeight="1.5:1" class="container margin-top">
+  <mat-grid-tile> -->
+<div class="overflow-hidden">
+  <div class="container-fluid col-xxl-8">
+    <div class="row flex-lg-nowrap align-items-center g-5">
+      <div class="order-lg-1 w-100">
+        <img
+          style="clip-path: polygon(25% 0%, 100% 0%, 100% 99%, 0% 100%)"
+          src="assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+          class="d-block mx-lg-auto img-fluid"
+          alt="Photo by Milad Fakurian"
+          loading="lazy"
+          srcset="
+          assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w,
+          assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150            150w,
+          assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300            300w,
+          assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768            768w,
+          assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024          1024w
+          "
+          sizes="(max-width: 1080px) 100vw, 1080px"
+          width="2160"
+          height="768"
+        />
+      </div>
+      <div class="col-lg-6 col-xl-5 text-center text-lg-start pt-lg-5 mt-xl-4">
+        <div class="lc-block mb-4">
+          <div editable="rich">
+            <h1 class="fw-bold display-3">DOBRODOŠLI U APARTMANE VITIĆ</h1>
+          </div>
+        </div>
+
+        <div class="lc-block mb-5">
+          <div editable="rich">
+            <p class="rfs-8">
+              Objekat Apartmani Vitic, koji se nalazi u Baru, blizu znamenitosti
+              Šušanjska plaža i Crvena plaža, nudi smeštaj sa besplatnim WiFi
+              internetom.
+            </p>
+          </div>
+        </div>
+
+        <div class="lc-block mb-6">
+          <a
+            class="btn btn-primary px-4 me-md-2 btn-lg"
+            href="#rezervisi"
+            role="button"
+            >Rezervišite smještaj</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /lc-block -->
+</div>
+
+<!-- <div class="d-flex flex-column padding">
+      <div>
+        <h1 class="">DOBRODOŠLI U APARTMANE <strong>VITIĆ</strong></h1>
+      </div>
+      <div>
+        <p class="">
+          Objekat Apartmani Vitic, koji se nalazi u Baru, blizu znamenitosti
+          Šušanjska plaža i Crvena plaža, nudi smeštaj sa besplatnim WiFi
+          internetom.
+        </p>
+      </div>
+      <div>
+        <button class="btn btn-primary">Nesto</button>
+        <button class="btn btn-secondary">Drugo nesto</button>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="hero-pic">
+      <img
+        src="assets/images/Slike aparmana pojedinacno/APARTMAN 1/slika_01.jpg"
+        alt=""
+      />
+    </div> -->
+<!-- </mat-grid-tile>
+</mat-grid-list> -->
+
+<div id="apartmani">
+  <section class="light">
+    <div class="container py-2">
+      <div class="h1 text-center text-dark" id="pageHeaderTitle">
+        My Cards Light
+      </div>
+
+      <article *ngFor="let apartman of apartmani" class="postcard light yellow">
+        <a class="postcard__img_link" href="#">
+          <img
+            class="postcard__img"
+            src="assets/images/Slike aparmana pojedinacno/APARTMAN 1/{{
+              apartman.img_url
+            }}.jpg"
+            alt="Image Title"
+          />
+        </a>
+        <div class="postcard__text t-dark pading-l">
+          <h1 class="postcard__title yellow">
+            <a href="#">{{ apartman.naziv }}</a>
+          </h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">
+            {{ apartman.opis }}
+          </div>
+          <ul class="postcard__tagbox">
+            <li><button class="btn btn-primary">MMMM</button></li>
+
+            <li><button class="btn btn-secondary">eeeeeeeeee</button></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<div>
+  <div cols="1" class="container" id="ucestalapitanja">
+    <div class="container rounded h-75 p-5 text-dark">
+      <h1>Često Postavljana Pitanja</h1>
+      <div
+        *ngFor="let pitanje of faq; let i = index"
+        class="accordion mb-3"
+        id="accordionExample"
+      >
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              (click)="showOdgovor(i)"
+              class="accordion-button faq--question"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <strong> {{ pitanje.pitanje }}</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseOne{{ i }}"
+            class="accordion-collapse collapse faq-answer"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              {{ pitanje.odgovor }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5" id="rezervisi">
+  <form [formGroup]="upitForm" (submit)="onSubmit()" class="row g-3">
+    <div class="d-flex flex-column justify-content-center">
+      <h2 class="heding-cta">Rezervisite Vas smjestaj</h2>
+      <p class="cta-description">
+        Molimo Vas da popunite sledeca posalj i posaljete upit za zeljeni datum
+        kakko bi provjerili da li imamo slobodno za vas termin. Odgovoricemo Vam
+        u najkracem roku. Hvala na razumjevanj!
+      </p>
+    </div>
+    <div class="col-md-6">
+      <label for="ime" class="form-label">Vase Ime</label>
+      <input formControlName="ime" type="email" class="form-control" id="ime" />
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Vasa Email adresa</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="email"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="brojOdraslih" class="form-label">Broj Odraslih Osoba</label>
+      <input
+        formControlName="brojOdraslih"
+        type="number"
+        class="form-control"
+        id="brojOdraslih"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="brojDjece" class="form-label">Broj Djece</label>
+      <input
+        formControlName="brojDjece"
+        type="number"
+        class="form-control"
+        id="brojDjece"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="datumOd" class="form-label">Datum Dolaska</label>
+      <input
+        formControlName="datumOd"
+        type="date"
+        class="form-control"
+        id="datumOd"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="datumDo" class="form-label">Datum polaska</label>
+      <input
+        formControlName="datumDo"
+        type="date"
+        class="form-control"
+        id="datumDo"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="imeApartmana" class="form-label"
+        >Unesite ime Apartman za koji saljete upit</label
+      >
+      <input
+        formControlName="imeApartmana"
+        type="text"
+        class="form-control"
+        id="imeApartmana"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="tel" class="form-label">Broj Telefona</label>
+      <input
+        formControlName="brojTel"
+        type="number"
+        class="form-control"
+        id="tel"
+      />
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Posalji Upit</button>
+    </div>
+  </form>
+</div>
+
+<footer class="footer_area section_padding_130_0 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Single Widget-->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="single-footer-widget section_padding_0_130">
+          <!-- Footer Logo-->
+          <div class="footer-logo mb-3"></div>
+          <p>
+            Appland is completely creative, lightweight, clean app landing page.
+          </p>
+          <!-- Copywrite Text-->
+          <div class="copywrite-text mb-5">
+            <p class="mb-0">
+              Made with <i class="lni-heart mr-1"></i>by<a
+                class="ml-1"
+                href="https://wrapbootstrap.com/user/DesigningWorld"
+                >Designing World</a
+              >
+            </p>
+          </div>
+          <!-- Footer Social Area-->
+          <div class="footer_social_area">
+            <a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Facebook"
+              ><i class="fa fa-facebook"></i></a
+            ><a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Pinterest"
+              ><i class="fa fa-pinterest"></i></a
+            ><a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Skype"
+              ><i class="fa fa-skype"></i></a
+            ><a
+              href="#"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Twitter"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- Single Widget-->
+      <div class="col-12 col-sm-6 col-lg">
+        <div class="single-footer-widget section_padding_0_130">
+          <!-- Widget Title-->
+          <h5 class="widget-title">About</h5>
+          <!-- Footer Menu-->
+          <div class="footer_menu">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Corporate Sale</a></li>
+              <li><a href="#">Terms &amp; Policy</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Single Widget-->
+      <div class="col-12 col-sm-6 col-lg">
+        <div class="single-footer-widget section_padding_0_130">
+          <!-- Widget Title-->
+          <h5 class="widget-title">Support</h5>
+          <!-- Footer Menu-->
+          <div class="footer_menu">
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Term &amp; Conditions</a></li>
+              <li><a href="#">Help &amp; Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Single Widget-->
+      <div class="col-12 col-sm-6 col-lg">
+        <div class="single-footer-widget section_padding_0_130">
+          <!-- Widget Title-->
+          <h5 class="widget-title">Contact</h5>
+          <!-- Footer Menu-->
+          <div class="footer_menu">
+            <ul>
+              <li><a href="#">Call Centre</a></li>
+              <li><a href="#">Email Us</a></li>
+              <li><a href="#">Term &amp; Conditions</a></li>
+              <li><a [routerLink]="['/login']" href="#">Help Center</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

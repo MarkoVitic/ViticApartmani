@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "vitic-apartmani": {
+      "hosting": {
+        "my-app": [
+          "vitic-apartmani"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "vitic-apartmani"
+  }
+}

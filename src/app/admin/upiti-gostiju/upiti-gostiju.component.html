@@ -1,0 +1,30 @@
+<table class="table container" *ngFor="let upit of upitiGostiju">
+  <thead>
+    <tr>
+      <th scope="col">Ime</th>
+      <th scope="col">Email</th>
+      <th scope="col">Broj Odraslih</th>
+      <th scope="col">Broj Djece</th>
+      <th scope="col">Datum Od</th>
+      <th scope="col">Datum Do</th>
+      <th scope="col">Ime Apartmana</th>
+      <th scope="col">Broj Telefona</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ upit.ime }}</td>
+      <td>{{ upit.email }}</td>
+      <td>{{ upit.brojOdraslih }}</td>
+      <td>{{ upit.brojDjece }}</td>
+      <td>{{ upit.datumOd }}</td>
+      <td>{{ upit.datumDo }}</td>
+      <td>{{ upit.imeApartmana }}</td>
+      <td>{{ upit.brojTel }}</td>
+      <td>
+        <button (click)="delteUpit(upit.id!)">Izbrisi</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,76 @@
+<form class="container mt-5" [formGroup]="faqForm" (submit)="onSubmit()">
+  <div class="d-flex justify-content-between">
+    <h2>Sekcija za doodavanje Cesto postavljenih pitanja</h2>
+    <button (click)="logOut()" class="btn btn-warning hed">Odjavi se</button>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Pitanje</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Pitanje"
+      formControlName="pitanje"
+    />
+    <div
+      class="form-text text-danger fw-bold"
+      *ngIf="faqForm.get('pitanje')?.invalid && faqForm.get('pitanje')?.touched"
+    >
+      Unos nije Validan! Molimo Vas da unesete Pitanje
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Odgovor</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Odgovor"
+      formControlName="odgovor"
+    />
+    <div
+      class="form-text text-danger fw-bold"
+      *ngIf="faqForm.get('odgovor')?.invalid && faqForm.get('odgovor')?.touched"
+    >
+      Unos nije Validan! Molimo Vas da unesete Odogovor na pitanje
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Dodaj Pianje</button>
+</form>
+
+<div class="container mt-4">
+  <div class="grid container">
+    <div>
+      <h2>Lista Apartman koja se nalaze u ponudi za izdavanje</h2>
+    </div>
+
+    <div *ngFor="let pitanje of pitanjaIodgovori">
+      <mat-card class="example-card card">
+        <mat-card-content>
+          <div>
+            <mat-card-subtitle>Pitanje:</mat-card-subtitle>
+            <mat-card-title> {{ pitanje.pitanje }}</mat-card-title>
+          </div>
+          <div>
+            <mat-card-subtitle>Odgovor:</mat-card-subtitle>
+            <mat-card-title> {{ pitanje.odgovor }}</mat-card-title>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="getOne(pitanje.id!)" class="btn btn-info" mat-button>
+            Izmijeni
+          </button>
+          <button
+            (click)="delite(pitanje.id!)"
+            class="btn btn-danger"
+            mat-button
+          >
+            Izbrisi
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
